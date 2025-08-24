@@ -1,0 +1,13 @@
+def fibonacci(n):
+    fib_sequence = [0, 1]
+    while len(fib_sequence) < n:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    # If n is 1, return only the first element
+    if n == 1:
+        return [0]
+    elif n == 2:
+        return fib_sequence[:n]
+    else:
+        return fib_sequence[:n]
+n = int(input("Enter the number of terms: "))
+print(fibonacci(n))
